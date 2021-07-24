@@ -22,7 +22,7 @@ jobs:
       - name: Cache Library
         uses: actions/cache@v2
         with:
-          path: UnityWebGLDeploy/Library
+          path: New Unity Project/Library
           key: Library-${{ github.sha }}
           restore-keys: Library-
 
@@ -31,7 +31,7 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          projectPath: UnityWebGLDeploy
+          projectPath: New Unity Project
           unityVersion: 2021.1.15f1
           targetPlatform: WebGL
 
